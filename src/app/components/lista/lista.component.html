@@ -1,0 +1,39 @@
+<header></header>
+
+<div class="row">
+    <div class="col-12">
+        <table>
+            <thead>
+            
+              <tr>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Edad</th>
+                  <th>Puesto</th>
+              </tr>
+            </thead>
+              <tbody *ngFor="let item of datos">
+
+                      <tr>
+                      <td>{{item.nombre}}</td>
+                      <td> {{item.apellido}} </td>
+                      <td>{{item.edad}}</td>
+                      <td>{{item.puesto}}</td>
+                      
+                        <td><button type="button" value="eliminar" class="btn btn-outline-primary">Eliminar</button></td>
+                     
+                      </tr>
+              </tbody>
+             
+            </table>               
+               
+ 
+
+
+               
+
+
+    </div>
+
+</div>
+<br>

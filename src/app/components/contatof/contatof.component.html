@@ -1,0 +1,61 @@
+  <header></header>
+
+<section class="form-register">
+
+  <form [formGroup]="formulario" (ngSubmit)="CHILLSAVE()">
+      <div>
+        <label for="nombre">
+          Nombre
+        </label>
+        <input id="nombre" type="text" formControlName="nombre">
+      </div>
+    
+      <div>
+        <label for="apellido">
+          Apellido
+        </label>
+        <input id="apellido" type="text" formControlName="apellido">
+      </div>
+
+      <div>
+          <label for="edad">
+              Edad
+          </label>
+          <input id="edad" type="text" formControlName="edad">
+        </div>
+        <div>
+          <label for="puesto">
+              Puesto
+          </label>
+          <input id="puesto" type="text" formControlName="puesto">
+        </div>
+    
+      <button class="botons" type="submit">Guardar</button>
+    
+    </form>
+
+
+  </section>
+  <table>
+    <thead>
+    
+      <tr>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Telefono</th>
+          <th>Evento</th>
+      </tr>
+    </thead>
+      <tbody *ngFor="let cita of datos">
+              <tr>
+                  <td>{{cita.nombre}}</td>
+              
+              <td>
+                {{cita.apellido}}
+              </td>
+              <td>{{cita.edad}}</td>
+              <td>{{cita.puesto}}</td>
+              </tr>
+      </tbody>
+     
+    </table>
